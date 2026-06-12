@@ -673,6 +673,72 @@ section {
   max-width: 32rem;
 }
 
+/* ============ Stack ============ */
+
+.stack-title {
+  max-width: 18ch;
+  margin-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5.4vw, 4.6rem);
+  line-height: 1.05;
+}
+
+.stack-title .word {
+  display: inline-block;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.stack-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 1.5rem 1.3rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.stack-item span {
+  font-size: 0.62rem;
+  color: var(--ink-dim);
+  transition: color 0.35s ease;
+}
+
+.stack-item:hover {
+  background: var(--bg-soft);
+  color: var(--accent);
+}
+
+.stack-item:hover span {
+  color: var(--accent);
+}
+
+.stack-item-accent {
+  color: var(--accent);
+}
+
+.stack-note {
+  margin-top: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
 /* ============ Experience ============ */
 
 .experience-title {
